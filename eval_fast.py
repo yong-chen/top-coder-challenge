@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-Fast Evaluation Script - Loads model once and batch processes all cases
+Fast Evaluation Script - V4 with refined 5-pattern expense caps
 """
 
 import json
 import pandas as pd
 import joblib
 import numpy as np
-from calculate_reimbursement_v3 import create_features, apply_expense_caps
+from calculate_reimbursement_v4 import create_features, apply_refined_caps
 
 def main():
-    print("🧾 Black Box Challenge - Fast Evaluation V3")
+    print("🧾 Black Box Challenge - Fast Evaluation V4")
     print("=" * 50)
     
     # Load model once
@@ -31,7 +31,7 @@ def main():
     print(f"✅ Loaded {len(test_cases)} test cases")
     
     # Batch process all cases
-    print("🧮 Processing all cases with V3 (ML + Expense Caps)...")
+    print("🧮 Processing all cases with V4 (ML + Refined 5-Pattern Caps)...")
     
     exact_matches = 0
     close_matches = 0
@@ -54,8 +54,8 @@ def main():
             X = features_df[feature_cols]
             ml_prediction = model.predict(X)[0]
             
-            # Apply expense caps (V3 improvement)
-            predicted = apply_expense_caps(ml_prediction, receipts, days, miles)
+            # Apply refined expense caps (V4 improvement)
+            predicted = apply_refined_caps(ml_prediction, receipts, days, miles)
             predicted = round(predicted, 2)
             
             error = abs(predicted - expected)
@@ -84,7 +84,7 @@ def main():
     
     # Results
     print(f"\nProgress: {len(test_cases)}/1000")
-    print("\n📊 EVALUATION RESULTS (V3)")
+    print("\n📊 EVALUATION RESULTS (V4)")
     print("=" * 35)
     
     if successful_runs > 0:
