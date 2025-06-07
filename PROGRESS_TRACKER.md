@@ -118,8 +118,17 @@
 
 | Phase | Start Time | End Time | Duration | Git Commits | Notes |
 |-------|------------|----------|----------|-------------|-------|
-| Analysis | 15:09 | | | | Initial repo exploration |
-| | | | | | |
+| Analysis | 15:09 | 15:35 | 26 min | 2 | Data analysis & Windows setup |
+| Initial ML | 15:35 | 15:50 | 15 min | 2 | ML model breakthrough |
+| Refinement | 15:50 | 16:10 | 20 min | 3 | Expense caps discovery & fixes |
+| **Current** | **16:10** | **TBD** | **TBD** | **1+** | **V4 refinement testing** |
+
+**⏰ Time Status:**
+- **Started:** 15:09 (2025-06-07)
+- **Current:** 16:12 (2025-06-07)
+- **Elapsed:** 1h 3min
+- **Remaining:** ~6h 57min
+- **Target completion:** 23:09
 
 ## Test Results Log
 
@@ -127,7 +136,8 @@
 |---------|---------------|---------------|-----------|-------|----------|------------|
 | V1 (Manual) | 0 | ~1 | $591.77 | >1000 | Rule-based estimate | Manual algorithm |
 | V2 (ML) | 0 | 26 (2.6%) | $28.52 | 128.52 | Random Forest | ML breakthrough |
-| V3 (ML + Caps) | TBD | TBD | TBD | TBD | Hybrid approach | Running... |
+| V3 (ML + Caps) | 0 | 26 (2.6%) | $31.46 | 131.46 | Hybrid approach | Corrected caps |
+| V4 (Refined) | TBD | TBD | TBD | TBD | 5-pattern caps | Running... |
 
 ## Key Algorithm Components Discovered:
 
