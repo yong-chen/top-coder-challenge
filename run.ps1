@@ -7,5 +7,5 @@ param(
     [Parameter(Mandatory=$true)][double]$TotalReceiptsAmount
 )
 
-# Call Python implementation
-python calculate_reimbursement.py $TripDurationDays $MilesTraveled $TotalReceiptsAmount
+# Call Python implementation V3 (ML + Expense Caps)
+python calculate_reimbursement_v3.py $TripDurationDays $MilesTraveled $TotalReceiptsAmount
